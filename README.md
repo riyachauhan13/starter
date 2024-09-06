@@ -234,8 +234,8 @@ const CartItem = ({ id, img, title, price, amount }) => {
         </button>
         {/* amount */}
         <p className='amount'>{amount}</p>
-        {/* decrease amount */}
-        <button className='amount-btn'>
+         {/* decrease amount */}
+       <button className='amount-btn'>
           <ChevronDown />
         </button>
       </div>
@@ -326,7 +326,7 @@ const cartSlice = createSlice({
       const itemId = action.payload;
       state.cartItems = state.cartItems.filter((item) => item.id !== itemId);
     },
-    increase: (state, { payload }) => {
+    increase: (state, { payload  }) => {
       const cartItem = state.cartItems.find((item) => item.id === payload.id);
       cartItem.amount = cartItem.amount + 1;
     },
